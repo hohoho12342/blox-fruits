@@ -1,0 +1,132 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0e0e1a, #1a1a3a);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #14142b;
+    padding: 20px 40px;
+    border-bottom: 3px solid #4a47ff;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.cart-btn {
+    background: #4a47ff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.fruit-card {
+    background: #1c1c32;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #4a47ff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fruit-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #4a47ff;
+}
+
+.fruit-card img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #4a47ff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #6b69ff;
+}
+
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: #12122b;
+    border-left: 3px solid #4a47ff;
+    padding: 20px;
+    transition: 0.4s;
+    overflow-y: auto;
+}
+
+.cart.open {
+    right: 0;
+}
+
+.cart h2 {
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    background: #1c1c32;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 20px;
+    background: #3dff6e;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.checkout-btn:hover {
+    background: #65ff8c;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart {
+        width: 100%;
+    }
+}
